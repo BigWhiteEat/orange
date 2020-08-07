@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/orange/static/css/main.3df5a832.chunk.css",
-    "main.js": "/orange/static/js/main.b6769954.chunk.js",
-    "main.js.map": "/orange/static/js/main.b6769954.chunk.js.map",
+    "main.js": "/orange/static/js/main.6fe91b62.chunk.js",
+    "main.js.map": "/orange/static/js/main.6fe91b62.chunk.js.map",
     "runtime-main.js": "/orange/static/js/runtime-main.df1ff0be.js",
     "runtime-main.js.map": "/orange/static/js/runtime-main.df1ff0be.js.map",
     "static/css/2.c8fdb744.chunk.css": "/orange/static/css/2.c8fdb744.chunk.css",
     "static/js/2.ad2835c0.chunk.js": "/orange/static/js/2.ad2835c0.chunk.js",
     "static/js/2.ad2835c0.chunk.js.map": "/orange/static/js/2.ad2835c0.chunk.js.map",
     "index.html": "/orange/index.html",
-    "precache-manifest.f328c1fe833a39af0ea5ce93c7a7402a.js": "/orange/precache-manifest.f328c1fe833a39af0ea5ce93c7a7402a.js",
+    "precache-manifest.d7a321b6e854aa1341f0ace3f13b1f09.js": "/orange/precache-manifest.d7a321b6e854aa1341f0ace3f13b1f09.js",
     "service-worker.js": "/orange/service-worker.js",
     "static/css/2.c8fdb744.chunk.css.map": "/orange/static/css/2.c8fdb744.chunk.css.map",
     "static/css/main.3df5a832.chunk.css.map": "/orange/static/css/main.3df5a832.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.c8fdb744.chunk.css",
     "static/js/2.ad2835c0.chunk.js",
     "static/css/main.3df5a832.chunk.css",
-    "static/js/main.b6769954.chunk.js"
+    "static/js/main.6fe91b62.chunk.js"
   ]
 }

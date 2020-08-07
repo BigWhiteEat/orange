@@ -1,0 +1,89 @@
+@import "../colorui/main.css";
+@import "../colorui/icon.css";
+
+.intro-bg{
+    width: 100%;
+}
+.title-bg {
+    background-color: rgb(18, 148, 250);
+    height: 64px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+.title {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.title img{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+}
+
+.title b{
+    margin-left: 10px;
+    color: white;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+
+
+.subTitle{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.subTitle h6{
+    color: black;
+    padding-right: 10px;
+    padding-top: 10px;
+
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.subTitle h5{
+    color: lightgoldenrodyellow;
+    padding-left: 10px;
+    padding-top: 10px;
+
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.table-intro{
+    width: 100%;
+    background-color: transparent;
+}
+/*.divider{*/
+/*    background-color: transparent;*/
+/*}*/
+.divider b{
+    font-size: 5px;
+    font-weight: lighter;
+}
+

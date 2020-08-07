@@ -1,0 +1,25 @@
+.line-chart-bg{
+    background-color: white;
+    border-radius: 4px;
+}
+
+.line-chart-container-bg{
+    margin:10px 10px 10px;
+}
+
+.line-title{
+    /*background-color: ;*/
+    margin-left: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.bottom-bg{
+    margin: 20px 40px 40px;
+    /*margin-bottom: 20px;*/
+}

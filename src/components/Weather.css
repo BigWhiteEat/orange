@@ -1,0 +1,33 @@
+.weather-bg{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(150, 148, 250);
+}
+
+.content-bg{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content-bg img{
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+    margin-left: 80px;
+}
+
+.content-bg div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.weather-bg b{
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    padding: 0px;
+    margin: 0px;
+}

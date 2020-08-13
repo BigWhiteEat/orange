@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.2907cff3.chunk.css",
-    "main.js": "/static/js/main.1b5bc907.chunk.js",
-    "main.js.map": "/static/js/main.1b5bc907.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.7b9542e5.js",
-    "runtime-main.js.map": "/static/js/runtime-main.7b9542e5.js.map",
-    "static/css/2.edaa4d9c.chunk.css": "/static/css/2.edaa4d9c.chunk.css",
-    "static/js/2.b95b519a.chunk.js": "/static/js/2.b95b519a.chunk.js",
-    "static/js/2.b95b519a.chunk.js.map": "/static/js/2.b95b519a.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.a76765e1b112cf096073e6c792c5778f.js": "/precache-manifest.a76765e1b112cf096073e6c792c5778f.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.edaa4d9c.chunk.css.map": "/static/css/2.edaa4d9c.chunk.css.map",
-    "static/css/main.2907cff3.chunk.css.map": "/static/css/main.2907cff3.chunk.css.map",
-    "static/js/2.b95b519a.chunk.js.LICENSE.txt": "/static/js/2.b95b519a.chunk.js.LICENSE.txt"
+    "main.css": "/orange/static/css/main.2907cff3.chunk.css",
+    "main.js": "/orange/static/js/main.b5784048.chunk.js",
+    "main.js.map": "/orange/static/js/main.b5784048.chunk.js.map",
+    "runtime-main.js": "/orange/static/js/runtime-main.8d6719b3.js",
+    "runtime-main.js.map": "/orange/static/js/runtime-main.8d6719b3.js.map",
+    "static/css/2.edaa4d9c.chunk.css": "/orange/static/css/2.edaa4d9c.chunk.css",
+    "static/js/2.9cba268d.chunk.js": "/orange/static/js/2.9cba268d.chunk.js",
+    "static/js/2.9cba268d.chunk.js.map": "/orange/static/js/2.9cba268d.chunk.js.map",
+    "index.html": "/orange/index.html",
+    "precache-manifest.07e00f14cbb3c0f67b1a7e7565b67a0f.js": "/orange/precache-manifest.07e00f14cbb3c0f67b1a7e7565b67a0f.js",
+    "service-worker.js": "/orange/service-worker.js",
+    "static/css/2.edaa4d9c.chunk.css.map": "/orange/static/css/2.edaa4d9c.chunk.css.map",
+    "static/css/main.2907cff3.chunk.css.map": "/orange/static/css/main.2907cff3.chunk.css.map",
+    "static/js/2.9cba268d.chunk.js.LICENSE.txt": "/orange/static/js/2.9cba268d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.7b9542e5.js",
+    "static/js/runtime-main.8d6719b3.js",
     "static/css/2.edaa4d9c.chunk.css",
-    "static/js/2.b95b519a.chunk.js",
+    "static/js/2.9cba268d.chunk.js",
     "static/css/main.2907cff3.chunk.css",
-    "static/js/main.1b5bc907.chunk.js"
+    "static/js/main.b5784048.chunk.js"
   ]
 }

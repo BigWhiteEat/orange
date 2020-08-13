@@ -1,0 +1,47 @@
+@import '../../node_modules/antd/dist/antd.css';
+.log-container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.log-bg{
+    margin-top: 100px;
+    width: 380px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*justify-items: center;*/
+    /*align-content: center;*/
+}
+
+.login img{
+    width: 40px;
+    height: 40px;
+}
+
+.login b{
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.account {
+    margin-top: 10px;
+}
+
+.pwd{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

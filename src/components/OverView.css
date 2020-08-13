@@ -1,0 +1,43 @@
+.overview-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-width: 5px;
+    border-color: var(--bgolors);
+    border-style: solid;
+    width: 100%;
+}
+
+.map-view{
+    width: 54%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.over-table-view{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #161616;
+}
+
+.over-table-view p{
+    margin-top: 60px;
+    margin-left: 20px;
+    font-weight: normal;
+    color: #fff;
+}
+
+ p b {
+     font-weight: bold;
+     color: #fff;
+ }
+
+.over-col-items{
+    width: 100%;
+    background-color: #161616;
+}

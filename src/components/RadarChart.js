@@ -9,6 +9,7 @@ class RadarChart extends Component {
         super(props);
         this.state = {
             containerId: (this.props.containerId != null) ? this.props.containerId : 'radar-container',
+            containerHeight: (this.props.containerHeight != null) ? this.props.containerHeight : 150,
         }
 
     }
@@ -16,16 +17,14 @@ class RadarChart extends Component {
         const { DataView } = DataSet;
 
         const data = [
-            { item: 'Design', a: 70, b: 30 },
-            { item: 'Development', a: 60, b: 70 },
-            { item: 'Marketing', a: 50, b: 60 },
-            { item: 'Users', a: 40, b: 50 },
-            { item: 'Test', a: 60, b: 70 },
-            { item: 'Language', a: 70, b: 50 },
-            { item: 'Technology', a: 50, b: 40 },
-            { item: 'Support', a: 30, b: 40 },
-            { item: 'Sales', a: 60, b: 40 },
-            { item: 'UX', a: 50, b: 60 },
+            { item: '0:00', a: 70, b: 30 },
+            { item: '3:00', a: 60, b: 70 },
+            { item: '6:00', a: 50, b: 60 },
+            { item: '9:00', a: 40, b: 50 },
+            { item: '12:00', a: 60, b: 70 },
+            { item: '15:00', a: 70, b: 50 },
+            { item: '18:00', a: 50, b: 40 },
+            { item: '21:00', a: 30, b: 40 }
         ];
         const dv = new DataView().source(data);
         dv.transform({
@@ -37,7 +36,8 @@ class RadarChart extends Component {
         const chart = new Chart({
             container: this.state.containerId,
             autoFit: true,
-            height: 400,
+            height: this.state.containerHeight - 50,
+            theme: 'dark',
         });
         chart.data(dv.rows);
         chart.scale('score', {
@@ -98,13 +98,11 @@ class RadarChart extends Component {
 
     render() {
         return (
-            <>
-                <div className={"radar-chart-bg"}>
-                    <p className={"line-title"}>这是关于图表的描述</p>
-                    <div id={this.state.containerId} className={"line-chart-container-bg"}>
-                    </div>
+            <div className={"chart-bg"}>
+                <b className={"line-title"}>桥塔稳定</b>
+                <div id={this.state.containerId} className={"radar-chart-bg"}>
                 </div>
-            </>
+            </div>
         );
     }
 }

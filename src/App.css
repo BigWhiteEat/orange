@@ -1,47 +1,42 @@
-/*.App {*/
-/*  text-align: center;*/
-/*}*/
-
-/*.App-logo {*/
-/*  height: 40vmin;*/
-/*  pointer-events: none;*/
-/*}*/
-
-/*@media (prefers-reduced-motion: no-preference) {*/
-/*  .App-logo {*/
-/*    animation: App-logo-spin infinite 20s linear;*/
-/*  }*/
-/*}*/
-
-/*.App-header {*/
-/*  background-color: #282c34;*/
-/*  min-height: 100vh;*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*  font-size: calc(10px + 2vmin);*/
-/*  color: white;*/
-/*}*/
-
-/*.App-link {*/
-/*  color: #61dafb;*/
-/*}*/
-
-/*@keyframes App-logo-spin {*/
-/*  from {*/
-/*    transform: rotate(0deg);*/
-/*  }*/
-/*  to {*/
-/*    transform: rotate(360deg);*/
-/*  }*/
-/*}*/
-
-
-.container{
-    /*background-color: yellow;*/
-    /*height: 100%;*/
+/*@import '~antd/dist/antd.dark.css';*/
+:root{
+    --bgolors: #000;
 }
+.container{
+    height: 100%;
+}
+
+.logo {
+    height: 64px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*justify-items: center;*/
+    /*align-content: center;*/
+}
+
+.logo img{
+    width: 20px;
+    height: 20px;
+}
+
+.logo b{
+    color: white;
+    font-weight: lighter;
+    font-size: medium;
+    margin-left: 5px;
+
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
 
 .trigger {
     font-size: 18px;
@@ -55,30 +50,48 @@
     color: #1890ff;
 }
 
-.site-layout{
-    /*height: 100%;*/
-    /*background-color: red;*/
-    /*margin-left: 320px;*/
-}
-
 .site-layout-background-header{
-
+    height: 64px;
 }
 
-.site-layout-background {
-    background: #f1f1f1;
-    margin-top: 2px;
-    padding: 10px;
-    padding-top: 0px;
-    /*minHeight: 280px;*/
-    /*max-height: 100%;*/
+
+.footer{
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--bgolors);
 }
 
-.title-tips{
-    background-color: transparent;
-    color: #333333;
+.footer b{
+    color: #fff;
     font-size: smaller;
-    font-weight: bolder;
-    margin-top: 10px;
-
+    font-weight: lighter;
 }
+
+
+
+
+/*.row-bg{*/
+/*    height: 100%;*/
+/*    background-color: yellow;*/
+/*}*/
+/*.coll-small{*/
+/*    height: 100px;*/
+/*    font-size: 14px;*/
+/*    line-height: 120px;*/
+/*    background: #0092ff;*/
+/*    border-radius: 4px;*/
+/*}*/
+
+
+/*.coll-big{*/
+/*    height: 200px;*/
+/*    font-size: 14px;*/
+/*    line-height: 120px;*/
+/*    background: #0092ff;*/
+/*    border-radius: 4px;*/
+/*}*/
+

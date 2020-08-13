@@ -31,8 +31,8 @@ class ShowModels extends Component {
         this.state = {
             headHeight: 64,
             contentPadding: 30,
-            leftSlideWidth: this.props.leftSlideWidth,
-            leftOffset:  this.props.leftSlideWidth
+            leftSlideWidth: (this.props.leftSlideWidth != null) ? this.props.leftSlideWidth : 200,
+            containerHeight: (this.props.containerHeight != null) ? this.props.containerHeight : 300,
         };
     }
     initThree = (domwidth, domheight) =>{
@@ -58,14 +58,13 @@ class ShowModels extends Component {
             // container.setAttribute('id','model_canvas');
             // container.setAttribute('width','100%');
             // container.setAttribute('height','100%');
-
             // document.getElementById('canvas-frame').appendChild(container);
         }
 
         function initScene() {
             scene = new THREE.Scene();
-            scene.background = new THREE.Color( 0xfafafa);
-            scene.fog = new THREE.Fog( 0xffffff, 200, 1000 );
+            scene.background = new THREE.Color( 0x161616);
+            scene.fog = new THREE.Fog( 0x161616, 200, 1000 );
         }
 
 
@@ -76,7 +75,7 @@ class ShowModels extends Component {
         }
 
         function initLight() {
-            light = new THREE.SpotLight( 0x999999, 1.5 );
+            light = new THREE.SpotLight( 0xffffff, 1.5 );
             light.position.set( -500, 500, 500);
             light.angle = Math.PI / 9;
 
@@ -87,7 +86,7 @@ class ShowModels extends Component {
             light.shadow.mapSize.height = 1024;
             scene.add( light );
 
-            light = new THREE.DirectionalLight(0x999999, 0.99);
+            light = new THREE.DirectionalLight(0xffffff, 0.99);
             light.position.set( 200, 200, 200 ).normalize();
             light.castShadow = true;
             light.shadow.camera.top = 180;
@@ -99,13 +98,13 @@ class ShowModels extends Component {
 
         function addGround() {
             // ground
-            var mesh = new THREE.Mesh( new THREE.PlaneBufferGeometry( 2000, 2000 ), new THREE.MeshPhongMaterial( { color: 0xffffff, depthWrite: false } ) );
+            var mesh = new THREE.Mesh( new THREE.PlaneBufferGeometry( 2000, 2000 ), new THREE.MeshPhongMaterial( { color: 0x161616, depthWrite: false } ) );
             mesh.rotation.x = - Math.PI / 2;
             mesh.receiveShadow = true;
             scene.add(mesh);
 
-            var grid = new THREE.GridHelper( 500, 100, 0x000000, 0x000000 );
-            grid.material.opacity = 0.5;
+            var grid = new THREE.GridHelper( 500, 100, 0xffffff, 0xffffff);
+            grid.material.opacity = 0.1;
             grid.material.transparent = true;
             scene.add(grid);
 
@@ -121,7 +120,7 @@ class ShowModels extends Component {
         function loadFbxModel() {
             // model
             let loader = new FBXLoader();
-            loader.load( '/fbx/tower.fbx', function ( object ) {
+            loader.load( './fbx/tower.fbx', function ( object ) {
                 globalModel = object;
                 processModel(object);
                 modelTransformControllers(object);
@@ -135,7 +134,7 @@ class ShowModels extends Component {
 
         function  loadObjModel() {
             let loader = new OBJLoader();
-            loader.load('/fbx/tatara-tower.obj', (object) => {
+            loader.load('./fbx/Humen.obj', (object) => {
                 globalModel = object;
                 processModel(object);
                  modelTransformControllers(object);
@@ -148,7 +147,7 @@ class ShowModels extends Component {
 
         function loadMtlModel() {
             let loader = new MTLLoader();
-            loader.load('/fbx/tatara-tower.mtl', (object) => {
+            loader.load('./fbx/tatara-tower.mtl', (object) => {
                 globalModel = object;
                 processModel(object);
                 modelTransformControllers(object);
@@ -162,8 +161,11 @@ class ShowModels extends Component {
 
         function processModel(object) {
             //模型 旋转 尺寸 位置
-            object.rotation.x = 90 * Math.PI / 180;
-            object.scale.set( 0.1, 0.1, 0.1);
+            // object.rotation.x = 90 * Math.PI / 180;
+            // object.scale.set( 0.1, 0.1, 0.1);
+            object.rotation.x = 3 * Math.PI / 2;
+            object.scale.set( 20, 20, 20);
+
             object.position.set( 0, 0, 0 );
             ressetColor(object);
 
@@ -190,7 +192,7 @@ class ShowModels extends Component {
          * ***/
 
         function ressetColor(object){
-            var materialObj  =  new THREE.MeshStandardMaterial({color:0x666666, metalness: 0.1, roughness: 0.9});//new THREE.MeshNormalMaterial({flatShading: false});
+            var materialObj  =  new THREE.MeshStandardMaterial({color:0xffffff, metalness: 0.9, roughness: 0.9});//new THREE.MeshNormalMaterial({flatShading: false});
             object.traverse(function(child){
                 if(child instanceof THREE.Mesh){
                     child.material = materialObj;
@@ -286,10 +288,10 @@ class ShowModels extends Component {
         }
 
         function animate() {
-            // requestAnimationFrame( animate );
-            // var delta = clock.getDelta();
-            // if ( mixer ) mixer.update( delta );
-            // renderer.render( scene, camera );
+            requestAnimationFrame( animate );
+            var delta = clock.getDelta();
+            if ( mixer ) mixer.update( delta );
+            renderer.render( scene, camera );
             // stats.update();
         }
 
@@ -298,17 +300,17 @@ class ShowModels extends Component {
         }
 
         function addListener() {
-            // //scene 监听
-            // window.addEventListener( 'resize', onWindowResize, false );
-            // //下面三个电脑端有效 鼠标点击
-            // container.addEventListener('mousedown', onContainerMouseDown, false);
-            // container.addEventListener('mouseup', onContainerMouseUp, false);
-            // container.addEventListener('mousemove', onContainerMouseMove, false );
-            //
-            // //手势
-            // container.addEventListener('touchstart',onContainerMouseDown);
-            // container.addEventListener('touchend',onContainerMouseUp);
-            // container.addEventListener('touchmove',onContainerMouseMove);
+            //scene 监听
+            window.addEventListener( 'resize', onWindowResize, false );
+            //下面三个电脑端有效 鼠标点击
+            container.addEventListener('mousedown', onContainerMouseDown, false);
+            container.addEventListener('mouseup', onContainerMouseUp, false);
+            container.addEventListener('mousemove', onContainerMouseMove, false );
+
+            //手势
+            container.addEventListener('touchstart',onContainerMouseDown);
+            container.addEventListener('touchend',onContainerMouseUp);
+            container.addEventListener('touchmove',onContainerMouseMove);
         }
 
         function init() {
@@ -319,13 +321,13 @@ class ShowModels extends Component {
 
             initLight();
             addGround();
-            loadFbxModel();
-            // loadObjModel();
+            // loadFbxModel();
+            loadObjModel();
             // loadMtlModel();
             initRenderer();
 
-            // addSceneControllers();
-            // addListener();
+            addSceneControllers();
+            addListener();
 
             //  stats
             // stats = new Stats();
@@ -340,22 +342,20 @@ class ShowModels extends Component {
      * @memberof ThreeBim
      */
     componentDidMount(){
-        console.log("1 leftSlideWidth =  " + this.state.leftOffset)
-        let renderWidth =  window.innerWidth - this.state.leftOffset - this.state.contentPadding
-        let renderHeight =  300;//window.innerHeight - this.state.headHeight - this.state.contentPadding
-        this.initThree(renderWidth, renderHeight);
+        let leftSlideWidth = Math.floor((document.body.clientWidth - this.state.leftSlideWidth) / 3 * 2) - 20;
+        this.initThree(leftSlideWidth, this.state.containerHeight - 20);
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({ leftOffset: this.props.leftSlideWidth}, ()=>{
-            // console.log("leftSlideWidth =  " + this.state.leftOffset)
-            let renderWidth =  window.innerWidth - (320 - this.state.leftOffset) - this.state.contentPadding
-            let renderHeight =  300;//window.innerHeight - this.state.headHeight - this.state.contentPadding
+        // console.log('componentWillReceiveProps =   ', this.props.leftSlideWidth);
+        this.setState({ leftSlideWidth: this.props.leftSlideWidth}, ()=>{
+            let renderWidth =  Math.floor((document.body.clientWidth +  this.state.leftSlideWidth - 280) / 3 * 2) - 20;
+            let renderHeight =  this.state.containerHeight - 20;
 
             camera.aspect = renderWidth / renderHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(renderWidth, renderHeight);
-            renderer.setPixelRatio( window.devicePixelRatio );
+            renderer.setPixelRatio(window.devicePixelRatio);
             renderer.render( scene, camera );
         });
     }

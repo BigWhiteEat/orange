@@ -73,17 +73,17 @@ class ToolBox extends Component {
         return (
             <div className="tools_div">
                 <div className="tools_main">
-                    <input type="image" src="./images/toolBtn1.png" id="tools_button1"
+                    <input type="image" src="/images/toolBtn1.png" id="tools_button1"
                            className="tools_main_click"/>
-                    <input type="image" src="images/toolBtn2.png" id="tools_button2"
+                    <input type="image" src="/images/toolBtn2.png" id="tools_button2"
                            className="tools_main_click" />
-                    <input type="image" src="/images/toolBtn3.png" id="tools_button3"
+                    <input type="image" src="images/toolBtn3.png" id="tools_button3"
                            className="tools_main_click" />
-                    <input type="image" src="/images/toolBtn4.png" id="tools_button4"
+                    <input type="image" src="./images/toolBtn4.png" id="tools_button4"
                            className="tools_main_click" />
-                    <input type="image" src="/images/toolBtn5.png" id="tools_button5"
+                    <input type="image" src="./images/toolBtn5.png" id="tools_button5"
                            className="tools_main_click" />
-                    <input type="image" src="/images/toolBtn6.png" id="tools_button6"
+                    <input type="image" src="./images/toolBtn6.png" id="tools_button6"
                            className="tools_main_click" />
                 </div>
 

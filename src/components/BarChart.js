@@ -8,81 +8,62 @@ class BarChart extends Component {
         super(props);
         this.state = {
             containerId: (this.props.containerId != null) ? this.props.containerId : 'bar-container',
+            containerHeight: (this.props.containerHeight != null) ? this.props.containerHeight : 150,
+            chart: null
         }
     }
-
     drawTables = (param) => {
         const data = [
-            { type: '11', value: 654, percent: 0.02 },
-            { type: '22', value: 654, percent: 0.02 },
-            { type: '333', value: 4400, percent: 0.2 },
-            { type: '444', value: 5300, percent: 0.24 },
-            { type: '555', value: 6200, percent: 0.28 },
-            { type: '666', value: 3300, percent: 0.14 },
-            { type: '777', value: 1500, percent: 0.06 },
+            { year: 'SJ51', value: 38 },
+            { year: 'SJ52', value: 52 },
+            { year: 'SJ56', value: 61 },
+            { year: 'SJ57', value: 145 },
+            { year: 'SJ58', value: 48 },
+            { year: 'SJ59', value: 38 },
+            { year: 'SJ60', value: 38 },
+            { year: 'SJ62', value: 38 },
         ];
-
-        const chart = new Chart({
+        this.state.chart  = new Chart({
             container: this.state.containerId,
             autoFit: true,
-            height: 200,
-            padding: [50, 20, 50, 20],
-        });
-        chart.data(data);
-        chart.scale('value', {
-            alias: '显示详情',
+            height: this.state.containerHeight - 80,
+            theme: 'dark',
         });
 
-        chart.axis('type', {
-            tickLine: {
-                alignTick: false,
-            },
-        });
-        chart.axis('value', false);
 
-        chart.tooltip({
-            showMarkers: false,
+        this.state.chart.data(data);
+        this.state.chart.scale('value', {
+            nice: true,
         });
-        chart.interval().position('type*value');
-        chart.interaction('element-active');
 
-// 添加文本标注
-        data.forEach((item) => {
-            chart
-                .annotation()
-                .text({
-                    position: [item.type, item.value],
-                    content: item.value,
-                    style: {
-                        textAlign: 'center',
-                    },
-                    offsetY: -30,
-                })
-                .text({
-                    position: [item.type, item.value],
-                    content: (item.percent * 100).toFixed(0) + '%',
-                    style: {
-                        textAlign: 'center',
-                    },
-                    offsetY: -12,
-                });
+        this.state.chart.tooltip({
+            showMarkers: false
         });
-        chart.render();
+        this.state.chart.interaction('active-region');
+        this.state.chart.interval().position('year*value');
+        this.state.chart.render();
     }
 
     componentDidMount(){
         this.drawTables()
-    }
+        // this.props.onRef(this)
+    };
+
+    // freshTable = () => {
+    //     console.log("freshTablefreshTable");
+    //     this.state.chart.interaction('active-region');
+    //     this.state.chart.interval().position('year*value');
+    //     this.state.chart.render();
+    // };
 
     render() {
         return (
-            <>
-                <div className={"bar-chart-bg"}>
-                    <p className={"line-title"}>这是关于图表的描述</p>
-                    <div id={this.state.containerId} className={"line-chart-container-bg"}>
-                    </div>
+            <div className={"chart-bg"}>
+                <b className={"line-title"}>Cable Force Error</b>
+                <div className={"line-separate"}></div>
+                <div id={this.state.containerId} className={"bar-chart-container-bg"}>
                 </div>
-            </>
+            </div>
         );
     }
 }

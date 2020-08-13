@@ -1,13 +1,7 @@
 import React, {Component} from 'react';
 
 import { Table, Menu, Divider} from 'antd';
-import Teams from "./Teams"
-import 'antd/dist/antd.css'
 import './Intro.css';
-
-import {
- AppstoreOutlined, BuildOutlined, ApartmentOutlined,MailOutlined,SettingOutlined
-} from '@ant-design/icons';
 
 
 const { SubMenu } = Menu;
@@ -132,43 +126,28 @@ class Intro extends Component {
 
         return (
             <div className={"intro-bg"}>
-                <div className={"title-bg"}>
-                    <div className={"title"}>
-                       <img src={"logo192.png"}/>
-                       <b>千米级斜拉桥数字化建造</b>
-                    </div>
-                </div>
-                {/*<Divider className={"divider"}  plain><b>SWJTU</b></Divider>*/}
 
-                <Menu
-                    defaultSelectedKeys={['1']}
-                    defaultOpenKeys={['info']}
-                    mode="inline"
-                    theme="light">
-                    <SubMenu key="info" icon={<AppstoreOutlined />} title="项目信息">
-                        <Table className={"table-intro"}
-                               columns={columns} dataSource={intro_data}
-                               bordered size={"small"}
-                               showSorterTooltip={false} pagination={false}
-                               showHeader={false}
-                               scroll={scroll}
-                        />
-                    </SubMenu>
-                    <SubMenu key="struct" icon={<BuildOutlined />} title="结构信息">
-                        <Table className={"table-intro"}
-                               columns={columns} dataSource={struct_data}
-                               bordered size={"small"}
-                               showSorterTooltip={false} pagination={false}
-                               showHeader={false}
-                               scroll={scroll}
-                        />
-                    </SubMenu>
+                <Divider  plain>结构信息</Divider>
 
-                    <SubMenu key="team" icon={<ApartmentOutlined />} title="工作团队">
-                        <Teams className={"table-intro"}/>
-                    </SubMenu>
+                <Table className={"table-intro"}
+                       columns={columns} dataSource={struct_data}
+                       bordered size={"small"}
+                       showSorterTooltip={false} pagination={false}
+                       showHeader={false}
+                       scroll={scroll}
+                />
 
-                </Menu>
+                <Divider  plain>项目信息</Divider>
+
+                <Table className={"table-intro"}
+                       columns={columns} dataSource={intro_data}
+                       bordered size={"small"}
+                       showSorterTooltip={false} pagination={false}
+                       showHeader={false}
+                       scroll={scroll}
+                />
+
+
 
             </div>
         );

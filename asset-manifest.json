@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/orange/static/css/main.2907cff3.chunk.css",
-    "main.js": "/orange/static/js/main.b5784048.chunk.js",
-    "main.js.map": "/orange/static/js/main.b5784048.chunk.js.map",
+    "main.css": "/orange/static/css/main.fda5f3e4.chunk.css",
+    "main.js": "/orange/static/js/main.7f5ed7f4.chunk.js",
+    "main.js.map": "/orange/static/js/main.7f5ed7f4.chunk.js.map",
     "runtime-main.js": "/orange/static/js/runtime-main.8d6719b3.js",
     "runtime-main.js.map": "/orange/static/js/runtime-main.8d6719b3.js.map",
-    "static/css/2.edaa4d9c.chunk.css": "/orange/static/css/2.edaa4d9c.chunk.css",
-    "static/js/2.9cba268d.chunk.js": "/orange/static/js/2.9cba268d.chunk.js",
-    "static/js/2.9cba268d.chunk.js.map": "/orange/static/js/2.9cba268d.chunk.js.map",
+    "static/css/2.ae66d788.chunk.css": "/orange/static/css/2.ae66d788.chunk.css",
+    "static/js/2.d9bb60c8.chunk.js": "/orange/static/js/2.d9bb60c8.chunk.js",
+    "static/js/2.d9bb60c8.chunk.js.map": "/orange/static/js/2.d9bb60c8.chunk.js.map",
     "index.html": "/orange/index.html",
-    "precache-manifest.07e00f14cbb3c0f67b1a7e7565b67a0f.js": "/orange/precache-manifest.07e00f14cbb3c0f67b1a7e7565b67a0f.js",
+    "precache-manifest.38bbd55044dc7a5065f6e4c88437bb80.js": "/orange/precache-manifest.38bbd55044dc7a5065f6e4c88437bb80.js",
     "service-worker.js": "/orange/service-worker.js",
-    "static/css/2.edaa4d9c.chunk.css.map": "/orange/static/css/2.edaa4d9c.chunk.css.map",
-    "static/css/main.2907cff3.chunk.css.map": "/orange/static/css/main.2907cff3.chunk.css.map",
-    "static/js/2.9cba268d.chunk.js.LICENSE.txt": "/orange/static/js/2.9cba268d.chunk.js.LICENSE.txt"
+    "static/css/2.ae66d788.chunk.css.map": "/orange/static/css/2.ae66d788.chunk.css.map",
+    "static/css/main.fda5f3e4.chunk.css.map": "/orange/static/css/main.fda5f3e4.chunk.css.map",
+    "static/js/2.d9bb60c8.chunk.js.LICENSE.txt": "/orange/static/js/2.d9bb60c8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8d6719b3.js",
-    "static/css/2.edaa4d9c.chunk.css",
-    "static/js/2.9cba268d.chunk.js",
-    "static/css/main.2907cff3.chunk.css",
-    "static/js/main.b5784048.chunk.js"
+    "static/css/2.ae66d788.chunk.css",
+    "static/js/2.d9bb60c8.chunk.js",
+    "static/css/main.fda5f3e4.chunk.css",
+    "static/js/main.7f5ed7f4.chunk.js"
   ]
 }

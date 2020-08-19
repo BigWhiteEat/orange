@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c7756a3f445d32b01916c78637759a1e",
+    "revision": "2d284a5863b5c1c151524c68f12156de",
     "url": "/orange/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/orange/static/css/2.6db94862.chunk.css"
   },
   {
-    "revision": "f0d217161144a48ca85c",
-    "url": "/orange/static/css/main.a1f3ed2b.chunk.css"
+    "revision": "79bcd566a1240aed2771",
+    "url": "/orange/static/css/main.98909b49.chunk.css"
   },
   {
     "revision": "d2b3f47442e8ea9b7579",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/orange/static/js/2.b6274eaf.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f0d217161144a48ca85c",
-    "url": "/orange/static/js/main.e4a22acf.chunk.js"
+    "revision": "79bcd566a1240aed2771",
+    "url": "/orange/static/js/main.53c83be2.chunk.js"
   },
   {
     "revision": "f2bb4cbff17ca48e89ed",

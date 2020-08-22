@@ -39,7 +39,7 @@ class Overview extends Component {
             useCluster: false,
             mapZoom: 8,
             mapCenter:{longitude: 114, latitude: 23},
-            markers: randomMarker(80),
+            markers: randomMarker(100),
         }
 
         this.markerEvents = {
@@ -68,9 +68,9 @@ class Overview extends Component {
     }
 
     renderMarkerLayout(extData){
-        if (extData.myIndex === 3){
-            return false;
-        }
+        // if (extData.myIndex === 3){
+        //     return false;
+        // }
         return <div style={style}>{extData.myLabel}</div>
     }
 
@@ -97,6 +97,9 @@ class Overview extends Component {
                         <br/>Structurally Deficient Deck Area: &nbsp;&nbsp;&nbsp;<b>66144416</b>
                     </p>
                 </div>
+
+
+
             </div>
         );
     }

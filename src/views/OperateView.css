@@ -1,0 +1,111 @@
+.op-container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #161616;
+}
+
+
+.op-bottom-container{
+    width: 100%;
+    bottom: 10px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    pointer-events:  none;
+    overflow-scrolling: auto;
+}
+
+.op-col-item-bg {
+    width: 15%;
+    min-width: 180px;
+    margin: 2px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    pointer-events:  none;
+}
+.op-col-item-container{
+    background-color: rgba(42, 39, 89, 0.86);
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    pointer-events:  auto;
+}
+
+
+
+.op-col-item-row1{
+    height: 30px;
+    background-color: rgb(37, 147, 252);
+    color: white;
+    font-size: smaller;
+    font-weight: bold;
+    padding-left: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.op-col-item-row1 a{
+    color: white;
+}
+
+.op-col-item-row1 a:hover{
+    color: #999999;
+}
+
+.op-col-item-row2{
+    margin-top: 5px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.op-col-item-row2 img{
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+}
+
+.op-col-item-row2 div{
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.op-col-item-row2 div b{
+    color: white;
+    font-size: smaller;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+
+.op-col-item-row3{
+    margin-left: 55px;
+    height: 30px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.op-col-item-row3 Button{
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+
+

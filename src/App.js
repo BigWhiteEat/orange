@@ -10,7 +10,6 @@ import TablesView from "./components/TablesView"
 import Overview from "./components/Overview";
 import Intro from "./components/Intro";
 
-import 'antd/dist/antd.dark.css'
 import './App.css';
 
 const { Header, Sider, Content, Footer } = Layout;
@@ -27,7 +26,6 @@ class App extends Component {
             pageIndex: "1",
             currentMenu: "0"
         }
-
         // this.renderDetails = this.renderDetails.bind(this);
     }
 
@@ -74,19 +72,21 @@ class App extends Component {
 
     renderDetails = () => {
         let colHeight =  Math.floor((document.body.clientHeight - 64) / 3);
-        console.log("colHeight = " +  colHeight);
         if (this.state.pageIndex === "1") {
+            console.log("111111")
             return (
                 <Overview containerHeight={colHeight}/>
             );
         } else  if (this.state.pageIndex === "2") {
+            console.log("222222")
             return (
-                // {this.state.showCols ?
-                //         (
-                //      <TablesView leftSlideWidth={this.state.leftSlideWidth} colBgHeight={this.state.colBgHeight}/>
-                //      ) : null}
                 <TablesView leftSlideWidth={this.state.leftSlideWidth} colBgHeight={colHeight}/>
             );
+
+            // {this.state.showCols ?
+            //         (
+            //      <TablesView leftSlideWidth={this.state.leftSlideWidth} colBgHeight={this.state.colBgHeight}/>
+            //      ) : null}
         }else  if (this.state.pageIndex === "3"){
             return (
                  <Intro />
@@ -161,12 +161,10 @@ class App extends Component {
                             </Menu.Item>
                         </Menu>
                     </Header>
-                        <>
-                            <Content  className={"water-fall"}>
-                                {this.renderDetails()}
-                            </Content>
-                            <Footer className={"footer"} ><b>Design ©2018 Created by SWJTU</b></Footer>
-                        </>
+                    <Content  className={"water-fall"}>
+                        {this.renderDetails()}
+                    </Content>
+                    <Footer className={"footer"} ><b>Design ©2018 Created by SWJTU</b></Footer>
                 </Layout>
             </Layout>
         );

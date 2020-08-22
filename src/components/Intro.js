@@ -123,12 +123,9 @@ class Intro extends Component {
         const scroll = {};
         scroll.x = '450px';
 
-
         return (
             <div className={"intro-bg"}>
-
                 <Divider  plain>结构信息</Divider>
-
                 <Table className={"table-intro"}
                        columns={columns} dataSource={struct_data}
                        bordered size={"small"}
@@ -146,9 +143,6 @@ class Intro extends Component {
                        showHeader={false}
                        scroll={scroll}
                 />
-
-
-
             </div>
         );
     }

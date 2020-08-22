@@ -18,7 +18,7 @@ class TablesView extends Component {
 
     render() {
         return (
-            <>
+            <div>
                 <div className={"water-fall-row"}>
                     <div className={"coll-small"}  style={{height: this.props.colBgHeight}}>
                         <Weather />
@@ -40,10 +40,10 @@ class TablesView extends Component {
                         </div>
                     </div>
                     <div className={"coll-small-right"} style={{height: this.props.colBgHeight * 2}}>
-                        <ShowModels leftSlideWidth={this.props.leftSlideWidth} containerHeight = {this.props.colBgHeight * 2} />
+                        <ShowModels leftSlideWidth={this.props.leftSlideWidth} containerHeight = {this.props.colBgHeight * 2} widthPercent={ 0.66} />
                     </div>
                 </div>
-            </>
+            </div>
         );
     }
 }
